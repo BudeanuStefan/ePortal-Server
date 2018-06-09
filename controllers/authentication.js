@@ -4,7 +4,7 @@ import User from '../models/user';
 import Cart from '../models/cart';
 import generateToken from '../services/token-jwt';
 import config, {hostUrl} from '../config';
-
+//test
 export const userinfo = function (req, res, next) {
     const regId = req.user.registrationId;
 
