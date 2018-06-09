@@ -2,7 +2,7 @@ import passport from 'passport';
 import CryptoJS from 'crypto-js';
 import User from '../models/user';
 import config from '../config';
-
+//comment
 const JwtStrategy = require('passport-jwt').Strategy;
 const ExtractJwt = require('passport-jwt').ExtractJwt;
 const LocalStrategy = require('passport-local');
@@ -42,7 +42,7 @@ export default function () {
             const decrypted = bytes.toString(CryptoJS.enc.Utf8);
             if(decrypted && decrypted.length > 0) {
                 if (decrypted !== password) {
-                    return done(null, false);
+                    return done(null, false);i
                 }
                 else {
                     return done(null, user);
