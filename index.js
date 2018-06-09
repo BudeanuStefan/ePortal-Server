@@ -44,12 +44,17 @@ mongoose.connect(config.database, {useMongoClient: true,
                 if (delOK) console.log("Collection deleted");
             })
 
-            /*dbo.collections.authors.drop(function(err, delOK) {
+           /* dbo.collections.authors.drop(function(err, delOK) {
+                if (err) throw err;
+                if (delOK) console.log("Collection deleted");
+            })*/
+
+            dbo.collections.lectures.drop(function(err, delOK) {
                 if (err) throw err;
                 if (delOK) console.log("Collection deleted");
             })
 
-            dbo.collections.lectures.drop(function(err, delOK) {
+           /* dbo.collections.comment.drop(function(err, delOK) {
                 if (err) throw err;
                 if (delOK) console.log("Collection deleted");
             })*/
@@ -65,12 +70,12 @@ mongoose.connect(config.database, {useMongoClient: true,
                       });
                 });*/
         }
-       // AuthorCourse.buildAuthor();
+        //AuthorCourse.buildAuthor();
         SearchCourse.buildCourse();
-        //LectureCourse.buildLecture();
-       // AuthorCourse.populate();
+        LectureCourse.buildLecture();
+        //AuthorCourse.populate();
         SearchCourse.populate();
-        //LectureCourse.populate();
+        LectureCourse.populate();
         //UserCourse.populate();
         //CommentCourse.populate();
     })
