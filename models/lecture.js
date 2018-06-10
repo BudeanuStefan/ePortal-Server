@@ -12,6 +12,7 @@ const LectureSchema = new Schema({
     header: [{
         no: {type: Number, default: 0},
         title: {type: String, default: ''},
+        testLink: {type: String, default: ''},
         lectures: {type: Number, default: 0},
         body: [{
             sub_no: {type: Number, default: 0},

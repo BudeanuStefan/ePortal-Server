@@ -6,6 +6,7 @@ export const buildLecture = function () {
     function makeLecture(data) {
         return new Lecture({
             no: data.no,
+            testLink: data.testLink,
             total: data.total,
             header: data.header
         });
