@@ -50,8 +50,9 @@ export const signup = function (req, res, next) {
     const year = req.body.yearOfStudy;
     const specialization = req.body.specialization;
     const files = req.files;
+    const userType = req.body.userType;
 
-    if (!email || !password || !name || !registrationId || !year || !specialization || !level) {
+    if (!email || !password || !name || !registrationId || !year || !specialization || !level || !userType) {
         return res.status(400).send({error: 'Invalid user information.'});
     }
 
@@ -89,6 +90,7 @@ export const signup = function (req, res, next) {
             const user = new User({
                 registrationId: registrationId,
                 password: encrypted,
+                userType: userType,
                 profile: {
                     name: name,
                     email: email,

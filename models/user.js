@@ -7,6 +7,7 @@ const UserSchema = new Schema({
     no: Number,
     registrationId: {type: String, unique: true},
     password: {type: String, default: ''},
+    userType: {type: String, default: '', lowercase: true},
     profile: {
         name: {type: String, default: ''},
         email: {type: String, default: '', lowercase: true},

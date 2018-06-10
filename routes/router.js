@@ -12,7 +12,7 @@ passportLogin();
 const requireAuth = passport.authenticate('jwt', { session: false });
 const requireSignin = passport.authenticate('local', { session: false });
 
-googleStrategy();
+//googleStrategy();
 
 import * as SearchCourse from '../controllers/search-course';
 
