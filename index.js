@@ -70,14 +70,16 @@ mongoose.connect(config.database, {useMongoClient: true,
                       });
                 });*/
         }
-        //AuthorCourse.buildAuthor();
+        AuthorCourse.buildAuthor();
         SearchCourse.buildCourse();
         LectureCourse.buildLecture();
-        //AuthorCourse.populate();
+        CommentCourse.buildComment();
+
+        AuthorCourse.populate();
         SearchCourse.populate();
         LectureCourse.populate();
         //UserCourse.populate();
-        //CommentCourse.populate();
+        CommentCourse.populate();
     })
     .catch((err) => {
         if (err) {
