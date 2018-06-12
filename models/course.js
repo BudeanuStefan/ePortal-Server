@@ -20,6 +20,7 @@ const CourseSchema = new Schema({
     level: {type: String, default: '', lowercase: true},
     yearOfStudy: {type: Number, default: 0},
     specialization: {type: String, default: '', lowercase: true},
+    semester: {type: Number, default: 1},
     picture: {type: String, default: ''},
     updated: {type: Date, default: Date.now},
     description: {type: String, default: ''}

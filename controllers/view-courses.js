@@ -39,7 +39,7 @@ export const search = function (req, res, next) {
 
                const filtered = courses.filter(function(elem) {
                    if (elem.level === user.profile.level && elem.yearOfStudy === user.profile.yearOfStudy &&
-                        elem.specialization === user.profile.specialization) {
+                        elem.specialization === user.profile.specialization && elem.semester === user.profile.semester) {
 
                        return elem;
                    };
