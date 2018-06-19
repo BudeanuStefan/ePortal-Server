@@ -35,40 +35,29 @@ mongoose.connect(config.database, {useMongoClient: true,
 
         if (process.env.INITDB === "TRUE") {
             //mongoose.connection.dropDatabase()
-          /*  mongoose.connection.collections['courses'].drop(function(err) {
-                console.log('collection dropped');
-            })*/
+
             var dbo = mongoose.connection;
-            dbo.collections.courses.drop(function(err, delOK) {
+
+            dbo.collections.authors.drop(function(err, delOK) {
                 if (err) throw err;
                 if (delOK) console.log("Collection deleted");
             })
 
-           /* dbo.collections.authors.drop(function(err, delOK) {
+            dbo.collections.courses.drop(function(err, delOK) {
                 if (err) throw err;
                 if (delOK) console.log("Collection deleted");
-            })*/
+            })
 
             dbo.collections.lectures.drop(function(err, delOK) {
                 if (err) throw err;
                 if (delOK) console.log("Collection deleted");
             })
 
-           /* dbo.collections.comment.drop(function(err, delOK) {
+            dbo.collections.comments.drop(function(err, delOK) {
                 if (err) throw err;
                 if (delOK) console.log("Collection deleted");
-            })*/
+            })
 
-             /*   .then(function () {
-                    Sequence()
-                      .then(function () {
-                          //AuthorCourse.buildAuthor();
-                          SearchCourse.buildCourse();
-                          //LectureCourse.buildLecture();
-                          //UserCourse.buildUser();
-                          //CommentCourse.buildComment();
-                      });
-                });*/
         }
         AuthorCourse.buildAuthor();
         SearchCourse.buildCourse();
@@ -78,7 +67,6 @@ mongoose.connect(config.database, {useMongoClient: true,
         AuthorCourse.populate();
         SearchCourse.populate();
         LectureCourse.populate();
-        //UserCourse.populate();
         CommentCourse.populate();
     })
     .catch((err) => {

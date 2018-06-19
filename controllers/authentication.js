@@ -103,7 +103,7 @@ export const signup = function (req, res, next) {
                 if (err) {
                     return next(err);
                 }
-
+/*
                 const cart = new Cart({
                     user: user._id
                 });
@@ -115,7 +115,7 @@ export const signup = function (req, res, next) {
                     else {
                         return res.json({token: generateToken(user)});
                     }
-                });
+                });*/
             });
         }
     });
