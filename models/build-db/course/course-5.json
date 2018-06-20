@@ -17,7 +17,7 @@
   "level": "master",
   "yearOfStudy": 1,
   "semester": 2,
-  "picture": "testare.jpg",
+  "picture": "softtest.png",
   "updated": 1496156400000,
   "description": "Catalog Course Description: This course will examine fundamental software testing and related program analysis techniques. In particular, the important phases of testing will be reviewed, emphasizing the significance of each phase when testing different types of software. The course will also include concepts such as test generation, test oracles, test coverage, regression testing, mutation testing, program analysis (e.g., program-flow and data-flow analysis), and test prioritization. This course will examine fundamental software testing and program analysis techniques. In particular, the important phases of testing will be reviewed, emphasizing the significance of each phase when testing different types of software. Students will learn the state of the art in testing technology for object-oriented, component-based, concurrent, distributed, graphical-user interface, and web software. In addition, closely related concepts such as mutation testing and program analysis (e.g., program-flow and data-flow analysis) will also be studied. Emerging concepts such as test-case prioritization and their impact on testing will be examined. Students will gain hands-on testing/analysis experience via a multi-phase course project. By the end of this course, students should be familiar with the state-of-the-art in software testing. Students should also be aware of the major open research problems in testing."
 }

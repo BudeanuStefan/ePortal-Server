@@ -7,194 +7,118 @@
   "header": [
     {
       "no": 0,
-      "title": "Course Introduction and Resources",
+      "title": "DWH Intro",
       "testLink": "https://www.classmarker.com/online-test/start/?quiz=fqp5b1d083751ab9",
       "body": [
         {
           "sub_no": 0,
-          "content": "Course Roadmap (overview)",
+          "content": "A piece of IT history",
           "preview": false,
           "time": "03:25"
         },
         {
           "sub_no": 1,
-          "content": "Meet Your Instructor",
+          "content": "Intro2BI - 3 factors to make you happy in BI",
           "preview": true,
           "time": "02:08"
         },
         {
           "sub_no": 2,
-          "content": "Getting Course Resources (GitHub Repo)",
+          "content": "How is a DWH used to make decisions",
           "preview": true,
           "time": "00:25"
         },
         {
           "sub_no": 3,
-          "content": "Installing Docker",
+          "content": "About DWH",
           "preview": false,
           "time": "01:42"
         },
         {
           "sub_no": 4,
-          "content": "Code or Text Editor for Docker and Compose files",
+          "content": "What are dimenstions and measures",
           "preview": false,
           "time": "00:11"
-        },
-        {
-          "sub_no": 5,
-          "content": "Terminal Shell and Tab Completion for Docker CLI",
-          "preview": false,
-          "time": "01:19"
-        },
-        {
-          "sub_no": 6,
-          "content": "Course Chat Room",
-          "preview": false,
-          "time": "00:47"
-        },
-        {
-          "sub_no": 7,
-          "content": "Docker Version Format Change in Early 2017",
-          "preview": false,
-          "time": "01:14"
         }
       ],
-      "lectures": 8
+      "lectures": 5
     },
     {
       "no": 1,
-      "title": "Creating and Using Containers Like a Boss",
+      "title": "Brief history of DWH",
+      "testLink": "https://www.classmarker.com/online-test/start/?quiz=fqp5b1d083751ab9",
       "body": [
         {
           "sub_no": 0,
-          "content": "Check Our Docker Install and Config",
+          "content": "The history of Computer Storage",
           "preview": false,
           "time": "03:42"
         },
         {
           "sub_no": 1,
-          "content": "Starting a Nginx web server",
+          "content": "How the Data Warehouse has evolved to enable better analytics",
           "preview": false,
           "time": "08:58"
         },
         {
           "sub_no": 2,
-          "content": "Debrief: What Happens When We Run a Container",
+          "content": "Re-inventing the Data Warehouse with SAP In-Memory Dat Fabric",
           "preview": false,
           "time": "02:29"
         },
         {
           "sub_no": 3,
-          "content": "Container VS. VM: It's Just a Process",
+          "content": "Hybrid column row-oriented DBMS",
           "preview": false,
           "time": "04:12"
         },
         {
           "sub_no": 4,
-          "content": "Assignment: Manage Multiple Containers",
+          "content": "SAP HANA Tutorial",
           "preview": false,
           "time": "03:34"
-        },
-        {
-          "sub_no": 5,
-          "content": "Assignment Answers: Manage Multiple Containers",
-          "preview": false,
-          "time": "05:41"
-        },
-        {
-          "sub_no": 6,
-          "content": "What's Going On In Containers: CLI Process Monitoring",
-          "preview": false,
-          "time": "04:56"
-        },
-        {
-          "sub_no": 7,
-          "content": "Getting a Shell Inside Containers: No Need for SSH",
-          "preview": false,
-          "time": "10:45"
-        },
-        {
-          "sub_no": 8,
-          "content": "Docker Networks: Concepts for Private and Public Comms in Containers",
-          "preview": true,
-          "time": "11:36"
-        },
-        {
-          "sub_no": 9,
-          "content": "Docker Networks: CLI Management of Virtual Networks",
-          "preview": false,
-          "time": "07:58"
-        },
-        {
-          "sub_no": 10,
-          "content": "Docker Networks: DNS and How Containers Find Each Other",
-          "preview": false,
-          "time": "05:42"
-        },
-        {
-          "sub_no": 11,
-          "content": "Assignment: Using Containers for CLI Testing",
-          "preview": false,
-          "time": "02:30"
-        },
-        {
-          "sub_no": 12,
-          "content": "Assignment Answers: Using Containers for CLI Testing",
-          "preview": false,
-          "time": "02:50"
-        },
-        {
-          "sub_no": 13,
-          "content": "Assignment: DNS Round Robin Test",
-          "preview": false,
-          "time": "05:10"
-        },
-        {
-          "sub_no": 14,
-          "content": "Assignment Answers: DNS Round Robin Test",
-          "preview": false,
-          "time": "03:39"
         }
       ],
-      "lectures": 15
+      "lectures": 5
     },
     {
       "no": 2,
-      "title": "Container Images, Where To Find Them and How To Build Them",
+      "title": "DWH and Dimensional Modeling",
+      "testLink": "https://www.classmarker.com/online-test/start/?quiz=fqp5b1d083751ab9",
       "body": [
         {
           "sub_no": 0,
-          "content": "What's In An Image (and What Isn't)",
+          "content": "Introduction to the DWH discipline",
           "preview": false,
           "time": "02:01"
         },
         {
           "sub_no": 1,
-          "content": "The Mighty Hub: Using Docker Hub Registry Images",
+          "content": "Brief history and Data Architecture",
           "preview": false,
           "time": "11:44"
         },
         {
           "sub_no": 2,
-          "content": "Images and Their Layers: Discover the Image Cache",
+          "content": "Technical Architecture Considerations",
           "preview": false,
           "time": "12:41"
         },
         {
           "sub_no": 3,
-          "content": "Image Tagging and Pushing to Docker Hub",
+          "content": "Extract Transform Load and Data Quality",
           "preview": false,
           "time": "12:22"
         },
         {
           "sub_no": 4,
-          "content": "Building Images: The Dockerfile Basics",
+          "content": "DWH Lifecycle",
           "preview": false,
           "time": "06:34"
         },
         {
           "sub_no": 5,
-          "content": "Building Images: Running Docker Builds",
+          "content": "Trends in the evolution of DWH",
           "preview": false,
           "time": "03:36"
         },
@@ -206,22 +130,34 @@
         },
         {
           "sub_no": 7,
-          "content": "Assignment: Build Your Own Dockerfile and Run Containers From It",
+          "content": "Kimball-Dimensional Modeling in Depth",
           "preview": false,
           "time": "04:00"
         },
         {
           "sub_no": 8,
-          "content": "Assignment Answers: Build Your Own Dockerfile and Run Containers From It",
+          "content": "Dimensional Modeling to Data Vault Evolution",
           "preview": false,
           "time": "08:03"
+        },
+        {
+          "sub_no": 9,
+          "content": "Conceptual Data Vault Model",
+          "preview": false,
+          "time": "02:03"
+        },
+        {
+          "sub_no": 10,
+          "content": "Conclusions",
+          "preview": false,
+          "time": "03:03"
         }
       ],
-      "lectures": 9
+      "lectures": 11
     },
     {
       "no": 3,
-      "title": "Container Lifetime &amp; Persistent Data: Volumes, Volumes, Volumes",
+      "title": "Technical Architecture Considerations",
       "body": [
         {
           "sub_no": 0,
@@ -270,7 +206,7 @@
     },
     {
       "no": 4,
-      "title": "Making It Easier with Docker Compose: The Multi-Container Tool",
+      "title": "ETL and Data Quality",
       "body": [
         {
           "sub_no": 0,
@@ -319,7 +255,7 @@
     },
     {
       "no": 5,
-      "title": "Docker Services and The Power of Swarm: Built-In Orchestration",
+      "title": "DWH Lifecycle",
       "body": [
         {
           "sub_no": 0,

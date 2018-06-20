@@ -1,7 +1,6 @@
 import path from 'path';
 import AES from 'crypto-js/aes';
 import User from '../models/user';
-import Cart from '../models/cart';
 import generateToken from '../services/token-jwt';
 import config, {hostUrl} from '../config';
 //test
@@ -103,19 +102,6 @@ export const signup = function (req, res, next) {
                 if (err) {
                     return next(err);
                 }
-/*
-                const cart = new Cart({
-                    user: user._id
-                });
-
-                cart.save(function (err) {
-                    if (err) {
-                        return next(err);
-                    }
-                    else {
-                        return res.json({token: generateToken(user)});
-                    }
-                });*/
             });
         }
     });

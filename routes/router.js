@@ -4,7 +4,6 @@ import * as Authentication from '../controllers/authentication';
 import passportLogin from '../services/passport';
 import passport from 'passport';
 import generateToken from '../services/token-jwt';
-import googleStrategy from '../services/google-strategy';
 import {clientUrl} from '../config';
 
 passportLogin();
@@ -12,11 +11,7 @@ passportLogin();
 const requireAuth = passport.authenticate('jwt', { session: false });
 const requireSignin = passport.authenticate('local', { session: false });
 
-//googleStrategy();
-
 import * as SearchCourse from '../controllers/search-course';
-
-import * as SearchCart from '../controllers/search-cart';
 
 import * as LectureCourse from '../controllers/lecture-course';
 
@@ -45,11 +40,6 @@ export default function(app) {
     app.post('/add-comment', requireAuth, CommentCourse.addComment);
     app.post('/remove-comment', requireAuth, CommentCourse.removeComment);
     app.post('/toggle-helpful', requireAuth, CommentCourse.toggleHelpful);
-
-    app.post('/buy-cart', requireAuth, SearchCart.buyCart);
-    app.get('/list-cart', requireAuth, SearchCart.listCart);
-    app.post('/add-cart', requireAuth, SearchCart.addCart);
-    app.post('/remove-cart', requireAuth, SearchCart.removeCart);
 
     app.get('/view-courses', requireAuth, ViewCourses.search);
 

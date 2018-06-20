@@ -43,7 +43,7 @@ UserSchema.pre('save', function (next) {
         if(err) {
             return next(err);
         }
-
+console.log(result);
         doc.no = result.seq;
         // console.log('{User}:save => [' + doc.no + ']');
         next();
