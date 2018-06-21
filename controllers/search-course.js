@@ -20,6 +20,7 @@ export const buildCourse = function () {
             level: data.level,
             yearOfStudy: data.yearOfStudy,
             specialization: data.specialization,
+            semester: data.semester,
             picture: data.picture,
             updated: data.updated,
             description: data.description

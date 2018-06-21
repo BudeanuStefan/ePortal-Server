@@ -5,8 +5,52 @@ import Course from '../models/course'
 export const search = function (req, res, next) {
     const email = req.user.profile.email;
     const registrationId = req.user.registrationId;
-    var url= req.headers.referer;
+    var url = req.headers.referer;
     var previousCourses = false;
+
+    var d = new Date();
+    var month = d.getMonth() + 1;
+    var day = d.getDate();
+
+    const user = req.user;
+
+    if (month === 2 && day === 20) {
+        user.profile.semester = 2;
+        user.save(function (err) {
+            if (err) {
+                return next(err);
+            }
+        });
+    }
+
+    if (user.profile.level === 'licenta') {
+        if (user.profile.yearOfStudy === 1 || user.profile.yearOfStudy === 2) {
+            if (month === 10 && day === 1) {
+                user.profile.yearOfStudy = user.profile.yearOfStudy + 1;
+                user.profile.semester = 1;
+                user.save(function (err) {
+                    if (err) {
+                        return next(err);
+                    }
+                });
+            }
+        }
+    }
+
+    if (user.profile.level === 'master') {
+        if (user.profile.yearOfStudy === 1) {
+            if (month === 10 && day === 1) {
+                user.profile.yearOfStudy = user.profile.yearOfStudy + 1;
+                user.profile.semester = 1;
+                user.save(function (err) {
+                    if (err) {
+                        return next(err);
+                    }
+                });
+            }
+        }
+    }
+
     if (url.includes('previous')) {
         previousCourses = true;
     }
