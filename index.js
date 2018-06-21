@@ -34,7 +34,6 @@ mongoose.connect(config.database, {useMongoClient: true,
         console.log("Connected to the database");
 
         if (process.env.INITDB === "TRUE") {
-            mongoose.connection.dropDatabase()
 
             var dbo = mongoose.connection;
 

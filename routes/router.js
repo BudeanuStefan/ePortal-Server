@@ -42,6 +42,7 @@ export default function(app) {
     app.post('/toggle-helpful', requireAuth, CommentCourse.toggleHelpful);
 
     app.get('/view-courses', requireAuth, ViewCourses.search);
+    app.get('/view-previous-courses', requireAuth, ViewCourses.search);
 
     app.get('/auth/google',
         passport.authenticate('google', { scope: ['email profile'] }));

@@ -5,6 +5,11 @@ import Course from '../models/course'
 export const search = function (req, res, next) {
     const email = req.user.profile.email;
     const registrationId = req.user.registrationId;
+    var url= req.headers.referer;
+    var previousCourses = false;
+    if (url.includes('previous')) {
+        previousCourses = true;
+    }
 
     if (!email || email.length < 0) {
         return res.status(400).send({error: 'invalid email.'});
@@ -31,19 +36,27 @@ export const search = function (req, res, next) {
             }
 
             if (user) {
-               /* const filtered = user.courses.filter(function(elem) {
-                    if(elem.learn === true) {
-                        return elem;
-                    }
-                });*/
+                var filtered;
+                if (!previousCourses) {
+                    filtered = courses.filter(function(elem) {
+                        if (elem.level === user.profile.level && elem.yearOfStudy === user.profile.yearOfStudy &&
+                            elem.specialization === user.profile.specialization && elem.semester === user.profile.semester) {
 
-               const filtered = courses.filter(function(elem) {
-                   if (elem.level === user.profile.level && elem.yearOfStudy === user.profile.yearOfStudy &&
-                        elem.specialization === user.profile.specialization && elem.semester === user.profile.semester) {
+                            return elem;
+                        };
+                    })
+                }
+                else {
+                    filtered = courses.filter(function(elem) {
+                        if ((elem.level === user.profile.level)
+                            && (elem.specialization === user.profile.specialization)
+                            && ((elem.yearOfStudy === user.profile.yearOfStudy) || (elem.yearOfStudy === user.profile.yearOfStudy - 1))
+                            && ((elem.semester === user.profile.semester) || (elem.semester === user.profile.semester - 1)))  {
 
-                       return elem;
-                   };
-               })
+                            return elem;
+                        };
+                    })
+                }
 
                 if(filtered.length > 0) {
                     const results = filtered.map(function(elem) {
