@@ -94,8 +94,8 @@ export const search = function (req, res, next) {
                     filtered = courses.filter(function(elem) {
                         if ((elem.level === user.profile.level)
                             && (elem.specialization === user.profile.specialization)
-                            && ((elem.yearOfStudy === user.profile.yearOfStudy) || (elem.yearOfStudy === user.profile.yearOfStudy - 1))
-                            && ((elem.semester === user.profile.semester) || (elem.semester === user.profile.semester - 1)))  {
+                            && ((elem.yearOfStudy === user.profile.yearOfStudy - 1)
+                            || (elem.semester === user.profile.semester - 1)))  {
 
                             return elem;
                         };
@@ -104,7 +104,6 @@ export const search = function (req, res, next) {
 
                 if(filtered.length > 0) {
                     const results = filtered.map(function(elem) {
-                        //return elem.ref;
                         return elem;
                     });
 

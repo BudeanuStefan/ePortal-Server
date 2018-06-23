@@ -52,21 +52,14 @@ mongoose.connect(config.database, {useMongoClient: true,
                 if (delOK) console.log("Collection deleted");
             })
 
-            dbo.collections.comments.drop(function(err, delOK) {
-                if (err) throw err;
-                if (delOK) console.log("Collection deleted");
-            })
-
         }
         AuthorCourse.buildAuthor();
         SearchCourse.buildCourse();
         LectureCourse.buildLecture();
-        CommentCourse.buildComment();
 
         AuthorCourse.populate();
         SearchCourse.populate();
         LectureCourse.populate();
-        CommentCourse.populate();
     })
     .catch((err) => {
         if (err) {

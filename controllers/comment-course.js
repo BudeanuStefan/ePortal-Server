@@ -276,9 +276,9 @@ export const paginate = function (req, res, next) {
 };
 
 export const addComment = function (req, res, next) {
-    const email = req.user.profile.email;
+    const registrationId = req.user.registrationId;
 
-    if (!email || email.length < 0) {
+    if (!registrationId || registrationId.length < 0) {
         return res.status(400).send({error: 'invalid email.'});
     }
 
@@ -297,7 +297,7 @@ export const addComment = function (req, res, next) {
             }
 
             if (course) {
-                User.findOne({email: email})
+                User.findOne({registrationId: registrationId})
                     .populate({path: 'courses.ref'})
                     .exec(function (err, user) {
                         if (err) {
