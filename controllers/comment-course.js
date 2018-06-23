@@ -7,7 +7,7 @@ import {counter} from '../models/sequence';
 export const buildComment = function () {
     function makeComment(data, i) {
         return new Comment({
-            course: i,
+            course: data.course,
             date: data.date,
             name: data.name,
             content: data.content,
@@ -20,7 +20,7 @@ export const buildComment = function () {
 
     let merged = [];
 
-    for (let i = 1; i <= 13; i++) {
+    for (let i = 1; i <= 1; i++) {
         const raw = require('../models/build-db/comment/comment-' + i + '.json');
 
         let comments = [];
