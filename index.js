@@ -17,9 +17,6 @@ import router from './routes/router';
 import * as SearchCourse from './controllers/search-course';
 import * as AuthorCourse from './controllers/author-course';
 import * as LectureCourse from './controllers/lecture-course';
-import * as UserCourse from './controllers/user-course';
-import * as CommentCourse from './controllers/comment-course';
-import * as Course from './models/course';
 
 seedrandom();
 Math.seedrandom();

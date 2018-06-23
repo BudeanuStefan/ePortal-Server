@@ -19,7 +19,7 @@ export const buildAuthor = function () {
 
     let merged = [];
 
-    for (let i = 1; i <= 17; i++) {
+    for (let i = 1; i <= 9; i++) {
         const json = require('../models/build-db/author/author-' + i + '.json');
 
         const author = makeAuthor(json);
