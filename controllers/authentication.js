@@ -103,6 +103,10 @@ console.log(user);
                     return next(err);
                 }
             });
+
+            res.send({token: generateToken(user)});
         }
     });
+
+
 };

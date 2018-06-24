@@ -39,19 +39,8 @@ export default function(app) {
     app.get('/comments', CommentCourse.paginate);
     app.post('/add-comment', requireAuth, CommentCourse.addComment);
     app.post('/remove-comment', requireAuth, CommentCourse.removeComment);
-    app.post('/toggle-helpful', requireAuth, CommentCourse.toggleHelpful);
 
     app.get('/view-courses', requireAuth, ViewCourses.search);
     app.get('/view-previous-courses', requireAuth, ViewCourses.search);
 
-    app.get('/auth/google',
-        passport.authenticate('google', { scope: ['email profile'] }));
-
-    app.get('/auth/google/callback',
-        passport.authenticate('google', { failureRedirect: '/signin' }), function(req, res) {
-        if(req.user) {
-            const token = generateToken(req.user);
-            const url = `${clientUrl}/social-google?token=${token}`;
-            res.redirect(url);
-        }});
 };
