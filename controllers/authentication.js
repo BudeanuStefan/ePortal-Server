@@ -97,7 +97,7 @@ export const signup = function (req, res, next) {
                     picture: filename
                 }
             });
-
+console.log(user);
             user.save(function (err) {
                 if (err) {
                     return next(err);
