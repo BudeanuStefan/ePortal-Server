@@ -18,7 +18,9 @@ const LectureSchema = new Schema({
             sub_no: {type: Number, default: 0},
             content: {type: String, default: ''},
             preview: {type: Boolean, default: false},
-            time: {type: String, default: ''}
+            time: {type: String, default: ''},
+            type: {type: String, default: ''},
+            documentTitle: {type: String, default: ''}
         }]
     }]
 });

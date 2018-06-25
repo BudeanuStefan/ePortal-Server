@@ -12,36 +12,54 @@
       "body": [
         {
           "sub_no": 0,
-          "content": "A piece of IT history",
+          "content": "Course presentation 1",
           "preview": false,
-          "time": "03:25"
+          "time": "03:25",
+          "type": "pdf",
+          "documentTitle": "CoursePresentation1"
         },
         {
           "sub_no": 1,
-          "content": "Intro2BI - 3 factors to make you happy in BI",
-          "preview": true,
-          "time": "02:08"
+          "content": "A piece of IT history",
+          "preview": false,
+          "time": "03:25",
+          "type": "mp4",
+          "documentTitle": "A-Piece-Of-IT-History"
         },
         {
           "sub_no": 2,
-          "content": "How is a DWH used to make decisions",
+          "content": "Intro2BI - 3 factors to make you happy in BI",
           "preview": true,
-          "time": "00:25"
+          "time": "02:08",
+          "type": "mp4",
+          "documentTitle": "Intro2BI-3factors-to-make-you-happy-in-BI"
         },
         {
           "sub_no": 3,
-          "content": "About DWH",
-          "preview": false,
-          "time": "01:42"
+          "content": "How is a DWH used to make decisions",
+          "preview": true,
+          "time": "00:25",
+          "type": "mp4",
+          "documentTitle": "How-is-a-DWH-used-to-make-decisions"
         },
         {
           "sub_no": 4,
-          "content": "What are dimenstions and measures",
+          "content": "About DWH",
           "preview": false,
-          "time": "00:11"
+          "time": "01:42",
+          "type": "mp4",
+          "documentTitle": "About-DWH"
+        },
+        {
+          "sub_no": 5,
+          "content": "What are Dimensions and Measures",
+          "preview": false,
+          "time": "00:11",
+          "type": "mp4",
+          "documentTitle": "What-are-Dimensions-and-Measures"
         }
       ],
-      "lectures": 5
+      "lectures": 6
     },
     {
       "no": 1,

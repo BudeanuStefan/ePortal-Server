@@ -67,6 +67,7 @@ mongoose.connect(config.database, {useMongoClient: true,
 
 app.use('/public', express.static(__dirname + '/public'));
 app.use('/images', express.static(__dirname + '/public/img'));
+app.use('/lectures', express.static(__dirname + '/public/lectures'));
 
 app.use('/video',function(req, res, next) {
     res.setHeader("Access-Control-Allow-Origin", "*");
